@@ -1,0 +1,12 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowState="Maximized"
+        xmlns:MVVMAwesomium="clr-namespace:MVVMAwesomium;assembly=MVVMAwesomium" x:Class="MVVM.Awesomium.AdvancedControl.MainWindow"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+
+        <MVVMAwesomium:HTMLViewControl EnableBrowserDebug="True"  IsDebug="True" RelativePath="Views\MainView.html"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+    </Grid>
+</Window>

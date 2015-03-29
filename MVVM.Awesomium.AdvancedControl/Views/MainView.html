@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+       
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+       
+    </head>
+<body>
+   
+    <div class="scrollable">
+        <div id="container" data-bind="isotope: { data: Items, isotopeOptions: {itemSelector: '.isotope-item',masonry: {columnWidth: 150} }}">
+            <img class="isotope-item" data-bind="execute: Toggle, attr: { src:$data.Imagepath}, isotopecss:{'image-big': Big(), 'image-small':!Big()} " />
+        </div>
+    </div>
+
+    <script src="scripts/jquery-2.1.3.min.js"></script>
+    <script src="scripts/isotope.pkgd.min.js"></script>
+    <script src="scripts/knockout.js"></script>
+    <script src="scripts/knockout-deferred-updates.js"></script>
+    <script src="scripts/ko_extension.min.js"></script>
+    <script src="scripts/knockout-isotope-adapted,from.mbest.js"></script>
+    <script src="scripts/ko_isostope_element.js"></script>
+
+</body>
+</html>
