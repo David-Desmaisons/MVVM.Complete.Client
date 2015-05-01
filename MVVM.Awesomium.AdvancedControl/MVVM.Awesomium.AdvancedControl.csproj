@@ -106,9 +106,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <Content Include="javascript\knockout.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Views\css\main.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

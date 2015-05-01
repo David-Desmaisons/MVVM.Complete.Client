@@ -1,24 +1,25 @@
 ﻿<!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Main View</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-       
-        <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-       
-    </head>
+</head>
 <body>
-   
+
     <div class="scrollable">
         <div id="container" data-bind="isotope: { data: Items, isotopeOptions: {itemSelector: '.isotope-item',masonry: {columnWidth: 150} }}">
-            <img class="isotope-item" data-bind="execute: Toggle, attr: { src:$data.Imagepath}, isotopecss:{'image-big': Big(), 'image-small':!Big()} " />
+            <div class="isotope-item" data-bind="isotopecss:{'image-big': Big(), 'image-small':!Big()}">
+                <div class="image-container" data-bind="css:{'image-big': Big(), 'image-small':!Big()}">
+                    <img class="cover" data-bind="execute: Toggle, attr: { src:$data.Imagepath}, css:{'cover-big': Big(), 'cover-small':!Big()} " />
+                </div>
+            </div>
         </div>
     </div>
 

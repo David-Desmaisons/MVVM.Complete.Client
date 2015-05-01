@@ -5,11 +5,10 @@ ko.bindingHandlers.isotopecss = {
     },
 
     update: function (element, valueAccessor, allBindings, viewModel, bindingContext) {
-        var value = ko.unwrap(valueAccessor());
+        var value = ko.unwrap(valueAccessor()), res = ko.utils.domData.get(element, "_isotope");
 
-        if (!element._isotope)
-        {
-            var res = null, currentelement = element;
+        if (!res){
+            var currentelement = element;
             while (!res) {
                 var next =currentelement.parentNode;
                 if (next === null)
@@ -17,12 +16,22 @@ ko.bindingHandlers.isotopecss = {
                 res = Isotope.data(next);
                 currentelement = next;
             }
- 
-            element._isotope = res;
+
+            ko.utils.domData.set(element, "_isotope",res);
         }
 
-        setInterval(function () {
-            element._isotope.arrange();
-        }, 1);
+        var $element = $(element), zindex = $element.css("z-index");
+
+        function updateTransition() {
+            if (!!zindex){
+                $element.css("z-index", zindex);
+            }
+            $element.off("webkitTransitionEnd", updateTransition);
+        }
+
+        $element.css("z-index",999);
+        $element.on("webkitTransitionEnd", updateTransition);
+
+        res.arrange();
     }
 }

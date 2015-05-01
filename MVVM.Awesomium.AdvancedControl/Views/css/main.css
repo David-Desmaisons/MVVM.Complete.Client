@@ -107,6 +107,12 @@ textarea {
   -webkit-transition-property: -webkit-transform, opacity;
 }
 
+.image-container{
+    display: inline-block;
+    text-align: center;
+    line-height:50%;
+    -webkit-transition: width 0.4s, height 0.4s;
+}
 
 .image-small{
     border: none;
@@ -133,12 +139,27 @@ html, body{
 
 .scrollable{
     width:90%;
-    height:90%;
+    height:95%;
     overflow: auto;
 }
 
 
+.cover-big, .cover-small{
+     vertical-align: middle;
+}
 
+.cover-big{
+      top:10px;
+     max-width:290px;
+    max-height:290px;
+}
+
+
+.cover-small{
+    top:5px;
+      max-width:140px;
+    max-height:140px;
+}
 
 
 
